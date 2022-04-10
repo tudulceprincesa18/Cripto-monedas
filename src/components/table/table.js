@@ -20,7 +20,7 @@ function Table({coins, search}) {
                 {filterCoins.map(coin => (
                     <tr key={coin.id}>
                         <td>
-                            <img src={coin.image} style={{width: "50px", height:"50px"}}/>
+                            <img src={coin.image} alt="imagen" style={{width: "50px", height:"50px"}}/>
                         </td>
                         <td>
                             {coin.name}
