@@ -1,6 +1,9 @@
 import {React , useEffect, useState } from "react";
 import axios from 'axios';
 import Table from "./components/table/table";
+import Loader from "./components/Loader/Loader";
+
+
 
 
 function App() {
@@ -30,7 +33,7 @@ function App() {
   }, [''])
 
 
-  if(isLoading)return <>  cargando... </>
+  if(isLoading)return <>  cargando... <Loader/> </>
 
   return (
     <div className="container">
