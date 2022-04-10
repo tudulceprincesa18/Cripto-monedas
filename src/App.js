@@ -4,6 +4,9 @@ import Table from "./components/table/table";
 
 
 function App() {
+
+  const [search, setSearch] = useState("");
+  
   const [isLoading, setisLoading] = useState(false)
 
   const [data, setData] = useState([])
@@ -32,8 +35,10 @@ function App() {
   return (
     <div className="container">
       <div className="row">
-      <h1 className=" row justify-content-center m-4"> Precio de las cripto monedas </h1>
-      <Table coins={data}/>
+      <h1 className=" row justify-content-center m-4"> Cripto currencies price </h1>
+      <input type='text' placeholder='Search a coin' className='form-control bg-ligth border-0 m-3 text-center'
+      onChange={ e => setSearch(e.target.value)} />
+      <Table coins={data} search={search}/>
       </div>
     </div> 
   );

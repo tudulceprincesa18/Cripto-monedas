@@ -1,7 +1,10 @@
 import React from "react";
 
 
-function Table({coins}) {
+function Table({coins, search}) {
+
+    const filterCoins = coins.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase()))
+
     return (
         <table className="table">
             <thead>
@@ -14,7 +17,7 @@ function Table({coins}) {
                 </tr>
             </thead>
             <tbody>
-                {coins.map(coin => (
+                {filterCoins.map(coin => (
                     <tr key={coin.id}>
                         <td>
                             <img src={coin.image} style={{width: "50px", height:"50px"}}/>
