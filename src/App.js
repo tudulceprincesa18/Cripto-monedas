@@ -5,7 +5,7 @@ import Table from "./components/table/table";
 
 function App() {
 
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("");
   
   const [isLoading, setisLoading] = useState(false)
 
