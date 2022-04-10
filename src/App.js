@@ -27,7 +27,7 @@ function App() {
   
   useEffect( () => {
     getData()
-  }, [])
+  }, [''])
 
 
   if(isLoading)return <>  cargando... </>
